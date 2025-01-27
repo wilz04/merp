@@ -1,0 +1,269 @@
+\documentclass[xcolor=table, aspectratio=169]{beamer}
+
+
+% Setup appearance:
+
+\usetheme{Antibes}
+\usecolortheme{crane}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+% Syles:
+
+\setbeamercolor{normal text}{fg=white,bg=black!90}
+\setbeamercolor{structure}{fg=white}
+
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+
+\setbeamercolor{palette primary}{fg=black}
+\setbeamercolor{palette secondary}{fg=black}
+\setbeamercolor{palette tertiary}{fg=black}
+\setbeamercolor{palette quaternary}{fg=black}
+
+\setbeamercolor{block title}{fg=black}
+\setbeamercolor{block body}{fg=white,bg=black!85}
+
+\setbeamertemplate{caption}[numbered]{}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+% Standard packages
+
+\usepackage[english,spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{zed-csp}
+
+%usepackage[table,xcdraw]{xcolor}
+
+\graphicspath{{img/}}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title[Versi\'on preliminar del sistema]{Versi\'on preliminar del sistema de informaci\'on para la producci\'on y an\'alisis de datos referentes al presupuesto del MEP}
+
+\author[WilC]
+{
+	Wilberth Castro \\
+	\small{wilz04@gmail.com}
+}
+
+
+%institute[TEC]
+%{
+	%Tecnol\'ogico de Costa Rica, Programa de Maestr\'ia en Ciencias de Computaci\'on
+%}
+
+\date[10 Ago 2023]
+{
+	2023
+}
+
+
+% The main document
+
+\begin{document}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}
+	\maketitle
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Introducci\'on}
+
+\subsection{Contenido}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Contenido}
+	\begin{itemize}
+		\item Introducci\'on
+		\item Un sistema de informaci\'on como soluci\'on
+		\item Descripci\'on del sistema de informaci\'on
+		\item Herramientas de procesamiento, an\'alisis de datos y reporter\'ia
+		\item Insumos necesarios
+		\item Conclusiones y recomendaciones
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Presupuesto por resultados}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`En qu\'e consiste?}
+    En una serie de actividades, similar a la siguiente.
+    
+	\begin{enumerate}
+		\item Identificaci\'on de los objetivos estrat\'egicos
+		\item Identificaci\'on de las metas
+		\item Asignaci\'on de recursos a las metas
+		\item Establecimiento de indicadores de resultados
+	\end{enumerate}
+	
+	La lista de indicadores fue proveida por el Viceministro de Planificaci\'on Institucional y Coordinaci\'on Regional del MEP.
+		
+	\begin{block}{!`Importante!}
+		El proceso de asignaci\'on de recursos basado en resultados es un proceso iterativo que requiere revisi\'on y ajuste continuo. Es fundamental contar con datos precisos y actualizados para tomar decisiones informadas y garantizar una asignaci\'on de recursos efectiva.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Un sistema de informaci\'on como soluci\'on}
+
+\subsection{Carga de datos en el sistema de informaci\'on}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Entonces...}
+    Como parte de la soluci\'on hemos desarrollado un sistema de informaci\'on que facilitar\'a el c\'alculo y la visualizaci\'on de los indicadores, y que podr\'a acceder a, o en caso contrario almacenar\'a, los datos necesarios en tal c\'alculo.
+
+    \begin{block}{``que podr\'a acceder''}
+		La integraci\'on con las bases de datos actualmente mantenidas mediante alg\'un motor ser\'a implementada mediante una capa adicional que por demanda construya los conjuntos de datos que puedan ser utilizados en lugar de las tablas previstas.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Descripci\'on del sistema de informaci\'on}
+
+\subsection{Alcance del producto 3}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Antes de continuar...}
+    Es importante tener presente que...
+
+	\begin{enumerate}
+		\item La versi\'on del sistema de informaci\'on presentada debe ser considerada preliminar. El prop\'osito de esta presentaci\'on es faciliar la retroalimentaci\'on por parte del personal del MEP y de Unicef a cerca del desarrollo.
+		\item El tablero a\'un no ha sido desarrollado, su desarrollo es parte del producto 4, el cual consiste en el an\'alisis de datos.
+	\end{enumerate}
+		
+	\begin{block}{Sobre la Ingenier\'ia de Software}
+		En Ingenier\'a de Software, se acostumbra a dividir el desarrollo en fases tal que, en cada una sea posible presentar una versi\'on preliminar de un componente del sistema para discutir su dise\~no. Como producto de estas discusiones, m\'as que normal, es deseable que se proponga ajustes y nuevas caracter\'isticas.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Acceso al sistema de informaci\'on}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Desde el sitio Web del MEP...}
+    Para ingresar...
+    
+	\begin{enumerate}
+		\item El usuario solo necesita hacer click en el enlace designado.
+		\item El navegador desplegar\'a la p\'agina de bienvenida.
+	\end{enumerate}
+		
+	\begin{block}{!`Bienvenid@!}
+		En la p\'agina de bienvenida hay un componente de visualizaci\'on de indicadores, un componente de visualizaci\'on de datos geogr\'aficos, un cat\'alogo de productos, un formulario de solicitud de informaci\'on y un enlace al men\'u de administraci\'on (con la leyenda ``Inicia sesi\'on'').
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`Y si soy administrador?}
+    Entonces...
+    
+	\begin{enumerate}
+		\item El usuario debe hacer click en el enlace al men\'u administrativo.
+		\item El navegador desplegar\'a un formulario de autenticaci\'on.
+		\item El usuario debe ingresar sus datos de acceso y presionar el bot\'on ``Entrar''.
+		\item El navegador desplegar\'a un nuevo men\'u, el men\'u administrativo\footnote{En caso de que los datos de acceso no sean aut\'enticos, el navegador no permitir\'a el acceso, informar\'a lo sucedido y permitir\'a volver a intentar. El sistema cuenta con un mecanismo para el registro de nuevos usuarios (con la leyenda ``abre tu cuenta''), y otro para la recuperaci\'on de contrase\~nas olvidadas (con la leyenda ``?`Olvidaste tu password?'').}.
+	\end{enumerate}
+		
+	\begin{block}{!`Bienvenid@ Admin!}
+		Mediante el men\'u administrativo, el usuario podr\'a acceder a los formularios de mantenimiento, el acceso a cada formulario depender\'a de su perfil de administraci\'on.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Naturaleza de los datos que ser\'an procesados}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{!`Bienvenid@ Admin!}
+	\begin{block}{?`Qu\'e desea hacer?}
+		Cada una de las opciones en el men\'u le permitir\'a acceder a un formulario de mantenimiento para administrar un conjunto particular de datos. Cada formulario, mediante una barra de herramientas, le permitir\'a la carga de nuevos datos, y la actualizaci\'on y eliminaci\'on de los datos almacenados.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{!`Bienvenid@ Admin!}
+	Los conjuntos de datos a los que el usuario podr\'a acceder son los de...
+	
+	\begin{enumerate}
+		\item Localizaci\'on
+		\item N\'omina de centros educativos
+		\item Cat\'alogo de productos
+		\item An\'alisis de datos
+		\item Administraci\'on de solicitudes de informaci\'on
+		\item Seguridad y configuraci\'on
+	\end{enumerate}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Herramientas de procesamiento, an\'alisis de datos y reporter\'ia}
+
+\subsection{Herramientas existentes}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`Qu\'e estamos utilizando?}
+	\begin{itemize}
+		\item El mapa interactivo en la p\'agina de bienvenida es desplegado mediante el sistema de informaci\'on geogr\'afica que utiliza el MEP, ArcGIS.
+		\item El motor utilizado para soportar la base de datos es MySQL.
+		\item El dise\~no del sistema sigue el patr\'on Modelo Vista Controlador, dise\~no que mediante el modelizado que propone facilita el post-procesamiento de los datos, cuando es necesario.
+		%item En el navegador, para el despliegue de indicadores se podr\'ia utilizar la librer\'ia D3.js (si fuera necesario).
+		\item En el navegador, para el despliegue de formularios y reportes se utiliza el complemento DataTables\footnote{DataTables es un complemento especializado en el manejo de tablas de datos.}.
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Insumos necesarios}
+ 
+\subsection{Para continuar...}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Necesitamos...}
+	\begin{itemize}
+		\item Acceso a las bases de datos existentes en el MEP.
+		\item Disponibilidad del software de an\'alisis de datos que se utilice en el MEP.
+		\item Acceso al servidor en el que est\'a el sitio Web del MEP.
+		\item Lista de productos para el cat\'alogo, de Elena Montero.
+		\item Correcciones y sugerencias de la versi\'on preliminar del sistema de informaci\'on, por parte del Viceministro de Planificaci\'on.
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Conclusiones y recomendaciones}
+
+\subsection{Finalmente...}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{!`Desde el principio hemos estado cortos de tiempo, y ahora m\'as!}
+    A pesar de que el tiempo de desarrollo del sistema de informaci\'on est\'a dentro de lo que normalmente es requerido por un equipo de ingenier\'a de software...
+    
+	\begin{block}{Seguimos cortos de tiempo, por lo tanto...}
+		Es conveniente mantener el enfoque de soluci\'on de integraci\'on de bases de datos al desarrollar el siguiente producto, el tablero.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[plain, c]
+	\begin{center}
+		\Huge !`Gracias!
+	\end{center}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,834 @@
+\documentclass[a4paper, 9pt, conference]{article}              % Book class in 9 points % letterpaper, legalpaper
+ 
+%usepackage[utf8]{inputenc}
+%usepackage[english]{babel}
+\usepackage[english,spanish]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage{multicol}
+%usepackage{tasks}
+
+\usepackage{wrapfig}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{caption}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{hyperref}
+
+%usepackage{amssymb}
+\usepackage{amsmath}
+%usepackage{mathtools}
+%usepackage{zed-csp}
+%usepackage{amsthm}
+\usepackage{numprint}
+\usepackage{nicefrac}
+%usepackage{relsize}
+\usepackage{listings}
+%usepackage{chngcntr}
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{heuristic}[theorem]{Heur\'istica}
+
+\lstdefinelanguage{sql}{
+ alsodigit = {-},
+ morecomment=[l]{--}, % l is for line comment
+ morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+}
+
+\lstset{
+	language={sql},
+	%numbers=left,
+	%breaklines=true,
+	backgroundcolor=\color{black!10},
+	tabsize=2,
+	%\basicstyle=\tiny,%\ttfamily,
+	%literate={\ \ }{{\ }}1
+	commentstyle=\color{gray}
+}
+
+\hypersetup{
+	%frenchlinks=true,
+	linktocpage=true,
+	colorlinks=false,
+	%linkcolor=tec,%=red,%black!40,
+	%citecolor=tec,%=red,
+	%filecolor=tec,%black,
+	%urlcolor=tec,%black,
+	%linkbordercolor={.89 .13 .21},
+	%citebordercolor={.41 .85 .15},
+	%urlbordercolor={0 0 1},
+	pdftitle={Manual de usuario} %,
+	%pdfpagemode=FullScreen
+}
+
+\graphicspath{{img/}}
+
+\begin{document}
+
+\title{Sistema de informaci\'on, Manual de usuario}
+
+\author{
+	Wilberth Castro \\
+	\small{\texttt{wilz04@gmail.com}}
+}
+
+\date{\small{04 de setiembre 2023}}
+
+\maketitle
+
+
+\begin{abstract}
+	Este documento contiene un manual de usuario mediante el que el personal de las diferentes direcciones y dependencias del Ministerio de Educaci\'on P\'ublica de Costa Rica podr\'a ser guiado en los procesos necesarios para el mantenimiento de la base de datos del tablero de indicadores para el proceso de planificaci\'on del presupuesto por resultados para el ministerio. En este documento (1) se describe el prop\'osito del documento y la audiencia a la que se dirige, (2) se informa sobre los requisitos para la utilizaci\'on del sistema de informaci\'on, (3) se describe los casos de uso del sistema de informaci\'on mediante los que ser\'a posible mantener la base de datos, y (4) se describe otros casos de uso del sistema de informaci\'on mediante los que ser\'a posible administrar la p\'agina de bienvenida, la p\'agina que contiene el tablero.
+\end{abstract}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Prop\'osito y audiencia para el documento} \label{sec:goal}
+
+El prop\'osito de este documento es servir de gu\'ia en el uso del sistema de informaci\'on que mantiene la base de datos del tablero de indicadores, los indicadores necesarios en el proceso de planificaci\'on del presupuesto por resultados para el Ministerio de Educaci\'on P\'ublica de Costa Rica. Este documento est\'a dirigido al personal de las diferentes direcciones y dependencias del ministerio que trabajar\'a en el mantenimiento de la base de datos del tablero de indicadores.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Introducci\'on} \label{sec:intro}
+
+Este documento contiene un manual de usuario mediante el que el personal de las diferentes direcciones y dependencias del Ministerio de Educaci\'on P\'ublica de Costa Rica podr\'a ser guiado en los procesos necesarios para el mantenimiento de la base de datos del tablero de indicadores, tablero que facilitar\'a el proceso de planificaci\'on del presupuesto por resultados para el ministerio.
+
+En general, la planificaci\'on de un presupuesto por resultados requiere del establecimiento y la evaluaci\'on peri\'odica de indicadores de resultados, el proceso de planificaci\'on del presupuesto por resultados es un proceso iterativo que requiere revisi\'on y ajuste continuo a lo largo del tiempo, por lo tanto es fundamental disponer de datos precisos y actualizados. El tablero de indicadores permitir\'a facilitar el desarrollo de esta actividad.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Requisitos para la utilizaci\'on} \label{sec:req}
+
+El sistema de informaci\'on y el tablero de indicadores est\'an certificados para trabajar en los navegadores de escritorio (1) Microsoft Edge versi\'on 116.0.1938.69, Compilaci\'on oficial, 64 bits (2) Mozilla Firefox versi\'on 117.0, 64 bits y (3) Google Chrome versi\'on 116.0.5845.141, Compilaci\'on oficial, 64 bits.
+
+Se recomienda una velocidad de descarga desde Internet de 2 Megabytes como m\'inimo, de lo contrario, el rendimiento para el sistema de informaci\'on y para el tablero de indicadores podr\'ia no ser el \'optimo.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Casos de uso del sistema de informaci\'on} \label{sec:use}
+
+El sistema de informaci\'on debe ser accesado mediante uno de los navegadores mencionados en la secci\'on \ref{sec:req}. En el sitio Web del ministerio se ubicar\'a un enlace que al ser presionado dirigir\'a al usuario a la p\'agina de bienvenida del sistema de informaci\'on. La p\'agina web en la figura \ref{fig:dash} corresponde a la p\'agina de bienvenida. Seg\'un la figura, la p\'agina de bienvenida dispone de un componente de visualizaci\'on de indicadores, un componente de visualizaci\'on de datos geogr\'aficos, un cat\'alogo de productos, un formulario de solicitud de informaci\'on y un enlace al formulario de autenticaci\'on. Al presionar el enlace, el formulario de autenticaci\'on es desplegado, y al digitar los datos de acceso y presionar el bot\'on para ingresar, si los datos son aut\'enticos, el men\'u administrativo es desplegado\footnote{El usuario debe autenticarse para poder acceder al men\'u administrativo, las opciones del men\'u var\'ian en funci\'on del perfil del usuario.}, el men\'u que permite el acceso a los formularios de mantenimiento.
+
+%paragraph{Componente de visualizaci\'on de indicadores.}
+
+%paragraph{Componente de visualizaci\'on de datos geogr\'aficos.}
+ 
+\subsection{Despliegue de los productos en el cat\'alogo}
+
+El cat\'alogo de productos es una lista de documentos organizada en forma de \'arbol, en el que cada nodo no terminal corresponde a una categor\'ia, y cada nodo terminal corresponde a un documento. Al presionar el t\'itulo de un documento, el navegador despliega una nueva p\'agina o una descarga, seg\'un el tipo de contenido del documento.
+
+\subsection{Solicitud de informaci\'on}
+
+El formulario de solicitud de informaci\'on est\'a disponible para que cualquier usuario pueda solicitar informaci\'on que no pueda obtener a trav\'es del sistema de informaci\'on o del tablero de indicadores. El acceso al formulario requiere de la autenticaci\'on del usuario. En el campo bajo la leyenda ``Nombre de la direcci\'on y/o departamento a la que dirige la solicitud'' el usuario debe especificar el destinatario de la solicitud, el destinatario por omisi\'on es La Contralor\'ia de Servicios. Al enviar el formulario, la solicitud de informaci\'on ser\'a registrada en la base de datos.
+
+\subsection{Autenticaci\'on}
+
+La autenticaci\'on es necesaria para acceder al formulario de solicitud de informaci\'on y para acceder a los formularios de mantenimiento. La siguiente lista describe el procedimiento de autenticaci\'on.
+
+\begin{enumerate}
+	\item El enlace con la leyenda ``Inicia sesi\'on'' debe ser presionado, esto provocar\'a el despliegue del formulario de autenticaci\'on.
+	\item El usuario debe ingresar sus datos de acceso en los campos del formulario y luego presionar el bot\'on con la leyenda ``Entrar''.
+	\item En caso de que los datos de acceso no sean aut\'enticos, el navegador no permitir\'a el acceso, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador desplegar\'a el men\'u administrativo.
+\end{enumerate}
+
+El sistema cuenta con un mecanismo para el registro de nuevos usuarios, que puede ser activado al presionar el enlace con la leyenda ``abre tu cuenta'', y otro para la recuperaci\'on de contrase\~nas olvidadas, que puede ser activado al presionar el enlace con la leyenda ``?`Olvidaste tu \emph{password}?''. Mediante el men\'u administrativo, el usuario puede acceder a los formularios de mantenimiento, la disponibilidad de cada formulario depender\'a del perfil del usuario.
+
+\subsection{Mantenimiento de datos}
+ 
+La primera opci\'on del men\'u administrativo es la opci\'on ``Inicio'', esta opci\'on permite volver a la p\'agina de bienvenida, independientemente de la ubicaci\'on actual del usuario. Cada una de las otras opciones en el men\'u administrativo permite acceder a un conjunto de formularios de mantenimiento. Cada formulario de mantenimiento permite administrar un conjunto particular de datos, cada uno, mediante una barra de herramientas, permite la carga de nuevos datos, y la actualizaci\'on y eliminaci\'on de los datos cargados previamente. Los conjuntos de formularios y sus respectivos formularios de mantenimiento est\'an enumerados en la siguiente lista.
+	
+\begin{enumerate}
+	\item Localizaci\'on
+		\begin{enumerate}
+			\item Detalle de cantones
+			\item Detalle de distritos
+			\item Localidades
+			\item Direcciones Regionales
+			\item Centros Educativos
+			\item Matr\'icula
+			\item Modalidades
+			\item Tipolog\'ias
+		\end{enumerate}
+	\item N\'omina de centros educativos
+		\begin{enumerate}
+			\item Preescolar independiente
+			\item I y II ciclos
+			\item Colegios
+			\item CNV MTS
+			\item C.E.E.
+			\item CAIPAD
+			\item Escuelas nocturnas
+			\item IPEC
+			\item CINDEA
+			\item CONED
+		\end{enumerate}
+	\item Cat\'alogo de productos
+		\begin{enumerate}
+			\item Categor\'ias
+			\item Productos
+		\end{enumerate}
+	\item An\'alisis de datos
+	\item Mensajer\'ia
+		\begin{enumerate}
+			\item Solicitudes de informaci\'on
+		\end{enumerate}
+	\item Sistema
+		\begin{enumerate}
+			\item Autorizaci\'on de perfiles
+			\item Autorizaci\'on de usuarios
+			\item Perfiles
+			\item Perfiles por usuarios
+			\item Usuarios
+			\item Configuraci\'on
+		\end{enumerate}
+\end{enumerate}
+
+Cada formulario de mantenimiento permitir\'a, mediante una barra de herramientas y seg\'un el perfil del usuario, la lectura, carga, actualizaci\'on y eliminaci\'on de los datos cargados previamente mediante el formulario.
+
+\subsection{Mantenimiento de datos: Detalle de cantones}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Detalle de cantones'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar detalles de cantones, un campo para buscar detalles de cantones, la lista de detalles de cantones para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geocantonsdetail}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geocantonsdetail}		}
+		\caption{Formulario de mantenimiento de detalles de cantones}
+	\label{fig:geocantonsdetail}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar un nuevo detalle, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar el detalle seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar el o los detalles seleccionados en la lista. Un detalle puede ser seleccionado al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de detalles de cantones.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de el detalle, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de detalles p\'agina por p\'agina, cada p\'agina contiene diez registros de detalle, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de detalles de cantones.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de un nuevo detalle. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un cant\'on y un a\~no para los que hay registrado un detalle, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:geocantonsdetailnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geocantonsdetailnew}		}
+		\caption{Formulario de registro de detalles de cantones}
+	\label{fig:geocantonsdetailnew}
+\end{figure}
+
+\paragraph{Edici\'on de detalles de cantones.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay un detalle seleccionado, aparece el formulario para la edici\'on de el detalle. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:geocantonsdetailedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geocantonsdetailedit}		}
+		\caption{Formulario de edici\'on de detalles de cantones}
+	\label{fig:geocantonsdetailedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de detalles de cantones.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a el o los detalles seleccionados. Si no hay detalles seleccionados, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Detalle de distritos}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Detalle de distritos'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar detalles de distritos, un campo para buscar detalles de distritos, la lista de detalles de distritos para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geodistrictsdetail}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geodistrictsdetail}		}
+		\caption{Formulario de mantenimiento de detalles de distritos}
+	\label{fig:geodistrictsdetail}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar un nuevo detalle, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar el detalle seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar el o los detalles seleccionados en la lista. Un detalle puede ser seleccionado al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de detalles de distritos.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de el detalle, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de detalles p\'agina por p\'agina, cada p\'agina contiene diez registros de detalle, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de detalles de distritos.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de un nuevo detalle. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un distrito y un a\~no para los que hay registrado un detalle, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:geodistrictsdetailnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geodistrictsdetailnew}		}
+		\caption{Formulario de registro de detalles de distritos}
+	\label{fig:geodistrictsdetailnew}
+\end{figure}
+
+\paragraph{Edici\'on de detalles de distritos.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay un detalle seleccionado, aparece el formulario para la edici\'on de el detalle. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:geodistrictsdetailedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geodistrictsdetailedit}		}
+		\caption{Formulario de edici\'on de detalles de distritos}
+	\label{fig:geodistrictsdetailedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de detalles de distritos.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a el o los detalles seleccionados. Si no hay detalles seleccionados, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Direcciones Regionales}
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Direcciones Regionales'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar direcciones regionales, un campo para buscar direcciones regionales, la lista de direcciones regionales, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:georegionals}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{georegionals}		}
+		\caption{Formulario de mantenimiento de direcciones regionales}
+	\label{fig:georegionals}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar una nueva direcci\'on, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar la direcci\'on seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar la o las direcciones seleccionadas en la lista. Una direcci\'on puede ser seleccionada al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de direcciones regionales.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la direcci\'on, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de direcciones p\'agina por p\'agina, cada p\'agina contiene diez registros de direcci\'on, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de direcciones regionales.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de una nueva direcci\'on. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona una direcci\'on regional para los que hay registrada una direcci\'on, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:georegionalsnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{georegionalsnew}		}
+		\caption{Formulario de registro de direcciones regionales}
+	\label{fig:georegionalsnew}
+\end{figure}
+
+\paragraph{Edici\'on de direcciones regionales.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay una direcci\'on seleccionada, aparece el formulario para la edici\'on de la direcci\'on. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:georegionalsedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{georegionalsedit}		}
+		\caption{Formulario de edici\'on de direcciones regionales}
+	\label{fig:georegionalsedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de direcciones regionales.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a la o las direcciones seleccionadas. Si no hay direcciones seleccionadas, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Centros Educativos}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Centros Educativos'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar centros educativos, un campo para buscar centros educativos, la lista de centros educativos para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoschools}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoschools}		}
+		\caption{Formulario de mantenimiento de centros educativos}
+	\label{fig:geoschools}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar un nuevo centro, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar el centro seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar el o los centros seleccionados en la lista. Un centro puede ser seleccionado al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de centros educativos.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de el centro, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de centros p\'agina por p\'agina, cada p\'agina contiene diez registros de centro, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de centros educativos.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de un nuevo centro. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un centro y un pueblo para los que hay registrado un centro, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:geoschoolsnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoschoolsnew}		}
+		\caption{Formulario de registro de centros educativos}
+	\label{fig:geoschoolsnew}
+\end{figure}
+
+\paragraph{Edici\'on de centros educativos.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay un centro seleccionado, aparece el formulario para la edici\'on de el centro. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:geoschoolsedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoschoolsedit}		}
+		\caption{Formulario de edici\'on de centros educativos}
+	\label{fig:geoschoolsedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de centros educativos.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a el o los centros seleccionados. Si no hay centros seleccionados, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Matr\'icula}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Matr\'icula'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar matr\'iculas, un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar una nueva matr\'icula, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar la matr\'icula seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar la o las matr\'iculas seleccionadas en la lista. Una matr\'icula puede ser seleccionada al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de matr\'iculas.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de una nueva matr\'icula. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un centro, una modalidad y un a\~no para los que hay registrada una matr\'icula, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:geoenrollmentsnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollmentsnew}		}
+		\caption{Formulario de registro de matr\'iculas}
+	\label{fig:geoenrollmentsnew}
+\end{figure}
+
+\paragraph{Edici\'on de matr\'iculas.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay una matr\'icula seleccionada, aparece el formulario para la edici\'on de la matr\'icula. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:geoenrollmentsedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollmentsedit}		}
+		\caption{Formulario de edici\'on de matr\'iculas}
+	\label{fig:geoenrollmentsedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de matr\'iculas.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a la o las matr\'iculas seleccionadas. Si no hay matr\'iculas seleccionadas, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Modalidades}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Modalidades'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar modalidades, un campo para buscar modalidades, la lista de modalidades para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollmentmodes}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollmentmodes}		}
+		\caption{Formulario de mantenimiento de modalidades}
+	\label{fig:geoenrollmentmodes}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar una nueva modalidad, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar la modalidad seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar la o las modalidades seleccionadas en la lista. Una modalidad puede ser seleccionada al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de modalidades.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la modalidad, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de modalidades p\'agina por p\'agina, cada p\'agina contiene diez registros de modalidad, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de modalidades.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de una nueva modalidad. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un identificador y una descripci\'on para los que hay registrada una modalidad, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:geoenrollmentmodesnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollmentmodesnew}		}
+		\caption{Formulario de registro de modalidades}
+	\label{fig:geoenrollmentmodesnew}
+\end{figure}
+
+\paragraph{Edici\'on de modalidades.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay una modalidad seleccionada, aparece el formulario para la edici\'on de la modalidad. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:geoenrollmentmodesedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollmentmodesedit}		}
+		\caption{Formulario de edici\'on de modalidades}
+	\label{fig:geoenrollmentmodesedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de modalidades.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a la o las modalidades seleccionadas. Si no hay modalidades seleccionadas, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Tipolog\'ias}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Tipolog\'ias'' en el men\'u con la leyenda ``Localizaci\'on''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar tipolog\'ias, un campo para buscar tipolog\'ias, la lista de tipolog\'ias para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geotypologies}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geotypologies}		}
+		\caption{Formulario de mantenimiento de tipolog\'ias}
+	\label{fig:geotypologies}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar una nueva tipolog\'ia, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar la tipolog\'ia seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar la o las tipolog\'ias seleccionadas en la lista. Una tipolog\'ia puede ser seleccionada al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de tipolog\'ias.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la tipolog\'ia, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de tipolog\'ias p\'agina por p\'agina, cada p\'agina contiene diez registros de tipolog\'ia, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de tipolog\'ias.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de una nueva tipolog\'ia. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona una descripci\'on para los que hay registrada una tipolog\'ia, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:geotypologiesnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geotypologiesnew}		}
+		\caption{Formulario de registro de tipolog\'ias}
+	\label{fig:geotypologiesnew}
+\end{figure}
+
+\paragraph{Edici\'on de tipolog\'ias.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay una tipolog\'ia seleccionada, aparece el formulario para la edici\'on de la tipolog\'ia. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:geotypologiesedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geotypologiesedit}		}
+		\caption{Formulario de edici\'on de tipolog\'ias}
+	\label{fig:geotypologiesedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de tipolog\'ias.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a la o las tipolog\'ias seleccionadas. Si no hay tipolog\'ias seleccionadas, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Preescolar independiente}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Preescolar independiente'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments1}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments1}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments1}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: I y II ciclos}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``I y II ciclos'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments2}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments2}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments2}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: Colegios}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Colegios'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments3}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments3}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments3}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: CNV MTS}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``CNV MTS'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments4}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments4}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments4}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: C.E.E.}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``C.E.E.'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments5}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments5}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments5}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: CAIPAD}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``CAIPAD'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments6}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments6}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments6}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: Escuelas nocturnas}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Escuelas nocturnas'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments7}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments7}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments7}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: IPEC}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``IPEC'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments8}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments8}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments8}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: CINDEA}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``CINDEA'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments9}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments9}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments9}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: CONED}
+Es recomendable, antes de desplegar el formulario de mantenimiento, en la lista desplegable bajo el men\'u administrativo, seleccionar el a\~no en el que se quiere trabajar.
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``CONED'' en el men\'u con la leyenda ``N\'omina de centros educativos''. El formulario contiene un campo para buscar matr\'iculas, la lista de matr\'iculas para el a\~no seleccionado, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:geoenrollments10}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{geoenrollments10}		}
+		\caption{Formulario de mantenimiento de matr\'iculas}
+	\label{fig:geoenrollments10}
+\end{figure}
+
+
+\paragraph{B\'usqueda de matr\'iculas.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la matr\'icula, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de matr\'iculas p\'agina por p\'agina, cada p\'agina contiene diez registros de matr\'icula, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+
+\subsection{Mantenimiento de datos: Categor\'ias}
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Categor\'ias'' en el men\'u con la leyenda ``Cat\'alogo''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar categor\'ias, un campo para buscar categor\'ias, la lista de categor\'ias, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:catalogcategories}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{catalogcategories}		}
+		\caption{Formulario de mantenimiento de categor\'ias}
+	\label{fig:catalogcategories}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar una nueva categor\'ia, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar la categor\'ia seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar la o las categor\'ias seleccionadas en la lista. Una categor\'ia puede ser seleccionada al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de categor\'ias.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la categor\'ia, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de categor\'ias p\'agina por p\'agina, cada p\'agina contiene diez registros de categor\'ia, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de categor\'ias.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de una nueva categor\'ia. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un cant\'on y un a\~no para los que hay registrada una categor\'ia, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:catalogcategoriesnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{catalogcategoriesnew}		}
+		\caption{Formulario de registro de categor\'ias}
+	\label{fig:catalogcategoriesnew}
+\end{figure}
+
+\paragraph{Edici\'on de categor\'ias.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay una categor\'ia seleccionada, aparece el formulario para la edici\'on de la categor\'ia. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:catalogcategoriesedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{catalogcategoriesedit}		}
+		\caption{Formulario de edici\'on de categor\'ias}
+	\label{fig:catalogcategoriesedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de categor\'ias.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a la o las categor\'ias seleccionadas. Si no hay categor\'ias seleccionadas, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Productos}
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Productos'' en el men\'u con la leyenda ``Cat\'alogo''. El formulario contiene la barra de herramientas que permite registrar, editar y eliminar productos, un campo para buscar productos, la lista de productos, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:catalogproducts}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{catalogproducts}		}
+		\caption{Formulario de mantenimiento de productos}
+	\label{fig:catalogproducts}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar un nuevo producto, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar el producto seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar el o los productos seleccionados en la lista. Un producto puede ser seleccionado al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de productos.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de el producto, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de productos p\'agina por p\'agina, cada p\'agina contiene diez registros de producto, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Registro de productos.}
+
+Al presionar el bot\'on con la leyenda ``Nuevo'', aparece el formulario para el registro de un nuevo producto. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado o se selecciona un cant\'on y un a\~no para los que hay registrado un producto, el navegador no permitir\'a el registro, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que el registro fue exitoso. El formulario de registro luce como en la figura \ref{fig:catalogproductsnew}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{catalogproductsnew}		}
+		\caption{Formulario de registro de productos}
+	\label{fig:catalogproductsnew}
+\end{figure}
+
+\paragraph{Edici\'on de productos.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay un producto seleccionado, aparece el formulario para la edici\'on de el producto. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:catalogproductsedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{catalogproductsedit}		}
+		\caption{Formulario de edici\'on de productos}
+	\label{fig:catalogproductsedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de productos.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a el o los productos seleccionados. Si no hay productos seleccionados, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+\subsection{Mantenimiento de datos: Solicitudes}
+
+El formulario de mantenimiento puede ser desplegado al seleccionar la opci\'on con la leyenda ``Solicitudes'' en el men\'u con la leyenda ``Mensajer\'ia''. El formulario contiene la barra de herramientas que permite adjuntar el acuse de recibido solicitudes, un campo para buscar solicitudes, la lista de solicitudes, y una barra de paginaci\'on. El formulario de mantenimiento luce como en la figura \ref{fig:inforequests}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{inforequests}		}
+		\caption{Formulario de mantenimiento de solicitudes}
+	\label{fig:inforequests}
+\end{figure}
+
+La barra de herramientas, mediante (1) el bot\'on con la leyenda ``Nuevo'', permite registrar una nueva solicitud, mediante (2) el bot\'on con la leyenda ` Editar'' permite editar la solicitud seleccionado en la lista, y mediante (3) el bot\'on con la leyenda ``Eliminar'' permite eliminar la o las solicitudes seleccionadas en la lista. Una solicitud puede ser seleccionada al presionar cualquiera de sus datos.
+
+\paragraph{B\'usqueda de solicitudes.}
+
+El campo de b\'usqueda permite filtrar el contenido de la lista, para esto es necesario solo digitar en el campo un texto que forme parte de la solicitud, para el a\~no seleccionado. La lista es ordenable, es posible ordenarla al presionar cualquier celda de su encabezado, la lista ser\'a ordenada ascendentemente en funci\'on de la celda presionada, y al volver a presionar la misma celda, la lista ser\'a ordenada descendentemente en funci\'on de la celda presionada. La barra de paginaci\'on permite explorar el conjunto de solicitudes p\'agina por p\'agina, cada p\'agina contiene diez registros de solicitud, para ir a otra p\'agina es necesario solo presionar el n\'umero correspondiente en la barra. Si el n\'umero de la p\'agina de destino no es visible, se debe presionar otro m\'as cercano, as\'i hasta que el n\'umero de la p\'agina de destino sea visible. El enlace con la leyenda ``Anterior'' y el enlace con la leyenda ``Siguiente'' permiten ir a la p\'agina anterior y a la p\'agina siguiente, respectivamente.
+
+\paragraph{Edici\'on de solicitudes.}
+
+Al presionar el bot\'on con la leyenda ``Editar'', si hay una solicitud seleccionada, aparece el formulario para la edici\'on de la solicitud. En el formulario, los campos con asterisco deben ser rellenados. Si un campo con asterisco no es rellenado, el navegador no permitir\'a la edici\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la edici\'on fue exitosa. El formulario de edici\'on luce como en la figura \ref{fig:inforequestsedit}.
+
+\begin{figure}
+	\centering
+		\fbox{
+			\includegraphics[width=330px, keepaspectratio=false]{inforequestsedit}		}
+		\caption{Formulario de edici\'on de solicitudes}
+	\label{fig:inforequestsedit}
+\end{figure}
+
+\paragraph{Eliminaci\'on de solicitudes.}
+
+Al presionar el bot\'on con la leyenda ``Eliminar'', el sistema eliminar\'a la o las solicitudes seleccionadas. Si no hay solicitudes seleccionadas, el navegador no permitir\'a la eliminaci\'on, informar\'a lo sucedido y permitir\'a volver a intentar. En caso contrario, el navegador informar\'a que la eliminaci\'on fue exitosa.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+%bibliographystyle{IEEEtran}
+%bibliography{refs}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\end{document}

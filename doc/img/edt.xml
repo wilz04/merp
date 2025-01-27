@@ -1,0 +1,193 @@
+<mxfile host="app.diagrams.net" modified="2023-04-13T07:32:55.649Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="maV4sYjhimm9aPAQIFNX" version="21.1.7" type="device">
+  <diagram name="Page-1" id="2c0d36ab-eaac-3732-788b-9136903baeff">
+    <mxGraphModel dx="1335" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1dy8BC5haogB6WlIYiz3-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-123" target="1dy8BC5haogB6WlIYiz3-125" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-190" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-123" target="1dy8BC5haogB6WlIYiz3-124" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-123" value="Soporte técnico en el análisis de datos para el planeamiento de un presupuesto por resultados para el MEP" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="40" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-124" target="1dy8BC5haogB6WlIYiz3-126" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-124" target="1dy8BC5haogB6WlIYiz3-129" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-124" target="1dy8BC5haogB6WlIYiz3-132" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-197" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-124" target="1dy8BC5haogB6WlIYiz3-131" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-124" value="Implementación de un sistema de información para la producción y análisis de datos referentes al presupuesto del MEP por nivel educativo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="180" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-189" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-125" target="1dy8BC5haogB6WlIYiz3-130" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-125" value="Producción de insumos de análisis de datos que respalden el planeamiento de un presupuesto por resultados para el MEP" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="180" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pymjdbULi0rp8c7kBL1z-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-126" target="pymjdbULi0rp8c7kBL1z-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pymjdbULi0rp8c7kBL1z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-126" target="1dy8BC5haogB6WlIYiz3-133" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pymjdbULi0rp8c7kBL1z-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-126" target="1dy8BC5haogB6WlIYiz3-159" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pymjdbULi0rp8c7kBL1z-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-126" target="1dy8BC5haogB6WlIYiz3-138" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pymjdbULi0rp8c7kBL1z-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-126" target="1dy8BC5haogB6WlIYiz3-139" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-126" value="(1) Diseño del sistema de información" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-176" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-129" target="1dy8BC5haogB6WlIYiz3-140" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-129" target="1dy8BC5haogB6WlIYiz3-148" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-178" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-129" target="1dy8BC5haogB6WlIYiz3-149" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-179" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-129" target="1dy8BC5haogB6WlIYiz3-150" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-129" value="(2) Construcción del sistema de información" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-186" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-130" target="1dy8BC5haogB6WlIYiz3-185" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-130" target="1dy8BC5haogB6WlIYiz3-151" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-130" target="1dy8BC5haogB6WlIYiz3-152" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-130" value="(3) Generación de un informe sobre el análisis y el procesamiento de los datos base para el proyecto de presupuesto por programas" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-180" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-131" target="1dy8BC5haogB6WlIYiz3-153" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-181" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-131" target="1dy8BC5haogB6WlIYiz3-154" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-131" value="(4) Generación de un informe sobre el proceso de capacitación al personal del MEP" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-182" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-132" target="1dy8BC5haogB6WlIYiz3-155" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-183" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-132" target="1dy8BC5haogB6WlIYiz3-156" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-184" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-132" target="1dy8BC5haogB6WlIYiz3-157" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-132" value="(5) Generación de un informe final" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-133" value="&lt;div&gt;Identificación de los casos de uso a partir de las sesiones con las direcciones y dependencias del MEP&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-138" value="&lt;div&gt;Presentación para el MEP y UNICEF sobre el diseño del sistema de información&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="800" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-139" value="&lt;div&gt;Ajuste del diseño del sistema de información, según las sugerencias del MEP y UNICEF&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="920" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-140" target="1dy8BC5haogB6WlIYiz3-158" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-140" target="1dy8BC5haogB6WlIYiz3-165" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-140" target="1dy8BC5haogB6WlIYiz3-166" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-140" target="1dy8BC5haogB6WlIYiz3-167" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-140" value="Desarrollo del sistema de información" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-148" value="&lt;div&gt;Elaboración de los manuales de usuario&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-149" value="&lt;div&gt;Presentación para el MEP y UNICEF sobre el sistema de información&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-150" value="&lt;div&gt;Ajuste del sistema de información, según las sugerencias del MEP y UNICEF&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="800" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-151" value="&lt;div&gt;Generación de los reportes a partir del análisis de datos&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-152" value="&lt;div&gt;Apoyo del proceso de formulación del proyecto de presupuesto por resultados del MEP para el 2024&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-153" value="Elaboración de los materiales para la capacitación para el personal del MEP sobre el análisis de datos" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-154" value="Capacitación del personal del MEP" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-155" value="Soporte técnico al MEP para la validación y sustentación del proyecto" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-156" value="Documentación de las lecciones aprendidas, problemas y buenas prácticas aplicadas, durante la consultoría" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-157" value="Presentación para el MEP y UNICEF sobre los resultados, problemas y buenas prácticas aplicadas" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-158" value="Instalación y configuración de un prototipo en los servidores del MEP" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-159" value="&lt;div&gt;Diagramación del diseño UWE del sistema de información&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-165" value="Desarrollo del módulo de seguridad y de la capa de acceso a datos" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-166" value="Diseño de las vistas, definición de los modelos, y desarrollo de los controladores" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CPqB9kZqmwX8f0w4R8Ni-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-167" target="1dy8BC5haogB6WlIYiz3-169" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CPqB9kZqmwX8f0w4R8Ni-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1dy8BC5haogB6WlIYiz3-167" target="1dy8BC5haogB6WlIYiz3-168" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-167" value="Certificación del sistema de información" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-168" value="Ejecución de las pruebas" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="920" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-169" value="Definición de los casos de prueba" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="800" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dy8BC5haogB6WlIYiz3-185" value="&lt;div&gt;Análisis de datos&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pymjdbULi0rp8c7kBL1z-1" value="&lt;div&gt;Diseño preliminar de la base de datos (con el esquema para la matrícula/modalidad)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

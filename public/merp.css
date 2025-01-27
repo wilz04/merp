@@ -1,0 +1,117 @@
+/* MERP Library */
+
+/* Form controls */
+input.form-control {
+	width: 100%;
+}
+
+select.form-control {
+	width: 50% !important;
+}
+
+/* Menu bar */
+nav {
+	background-color: #ddd;
+	/* border: 1px solid #aaa; */
+}
+
+nav a, nav a:hover {
+	text-decoration: none;
+	font-size: 14px;
+}
+
+nav>ul>li {
+	width: 100px;
+}
+
+nav>ul>li li {
+	width: 150px;
+}
+
+nav li {
+	display: inline-block;
+	padding: 6px 8px;
+	background-color: #ddd;
+	/* border: 1px solid #ddd; */
+	/* text-align: center; */
+	color: #333;
+	position: relative;
+}
+
+nav li a {
+	color: #333;
+}
+
+nav li:hover {
+	background-color: #1e90ff;
+	color: #fff;
+}
+
+nav li a:hover {
+	color: #fff;
+}
+
+
+nav ul {
+	margin: 0 0 0 0px;
+  position: relative;
+	z-index: 10;
+}
+
+nav li>ul {
+	display: none;
+}
+
+nav li:hover>ul {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+
+/* Datagrid */
+h1 {
+	padding: 10px;
+}
+
+tr.odd {
+	background-color: #f0f0f0 !important;
+}
+
+tr.even {
+	background-color: #dddddd !important;
+}
+
+/* https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.css */
+.d-flex {
+	display: flex !important;
+}
+
+.d-inline {
+	display: inline !important;
+}
+
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+
+/* Info request form */
+#_form, #_form label, #_form input, #_form textarea, #_form p, #_form button {
+	font-size: 10px;
+	line-height: 1em;
+}
+
+#_form p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#_form header {
+	text-align: center;
+}
+
+/* Catalogue */
+#_catalogue, #_catalogue span, #_catalogue a {
+	font-size: 10px;
+	line-height: 1em;
+}

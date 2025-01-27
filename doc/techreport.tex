@@ -1,0 +1,186 @@
+\documentclass[9pt,a4paper]{IEEEtran}
+
+%usepackage{txfonts} % ss
+%let\temp\rmdefault
+%usepackage{fourier} % math & rm
+%let\rmdefault\temp
+
+%packages
+\usepackage[english,spanish]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{zed-csp}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage{framed}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\lhead{Promoci\'on de la Econom\'ia Circular mediante un sistema de criptodivisa con incentivos}
+
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{float}
+\usepackage{enumitem, tasks}
+
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\theequation{\alph{equation}}
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{heuristic}[theorem]{Heur\'istica}
+
+\hypersetup{
+	%frenchlinks=true,
+	linktocpage=true,
+	colorlinks=false,
+	%linkcolor=tec,%=red,%black!40,
+	%citecolor=tec,%=red,
+	%filecolor=tec,%black,
+	%urlcolor=tec,%black,
+	%linkbordercolor={.89 .13 .21},
+	%citebordercolor={.41 .85 .15},
+	%urlbordercolor={0 0 1},
+	pdftitle={Informe t\'ecnico} %,
+	%pdfpagemode=FullScreen
+}
+
+\graphicspath{{img/}}
+%\setlength{\parskip}{2mm}
+
+\begin{document}
+
+\title{Sistema de informaci\'on, Informe t\'ecnico}
+
+\author{
+	Wilberth Castro \\
+	\small{\texttt{wilz04@gmail.com}}
+}
+
+\date{\small{04 de setiembre 2023}}
+
+\maketitle
+
+
+\begin{abstract}
+	Este documento contiene un informe t\'ecnico sobre el proceso de desarrollo del sistema de informaci\'on mediante el que ser\'a posible mantener de la base de datos del tablero de indicadores para el proceso de planificaci\'on del presupuesto por resultados para el Ministerio de Educaci\'on P\'ublica de Costa Rica. El informe t\'ecnico incluye (1) un informe de las acciones de consulta y b\'usqueda de insumos realizadas para la formulaci\'on del proyecto de presupuesto, (2) una lista de perfiles y descripciones de los actores que estar\'an involucrados en el mantenimiento de la base de datos del sistema de informaci\'on, (3) un an\'alisis de los resultados alcanzados, y (4) la lista de las acciones por realizar necesarias para continuar con el proceso de desarrollo.
+\end{abstract}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Introducci\'on} \label{sec:intro}
+
+Este documento contiene un informe t\'ecnico sobre el proceso de desarrollo del sistema de informaci\'on, el producto 3, mediante el que ser\'a posible mantener de la base de datos del tablero de indicadores, tablero que facilitar\'a el proceso de planificaci\'on del presupuesto por resultados para el Ministerio de Educaci\'on P\'ublica de Costa Rica \cite{userm}. En este documento, el t\'ermino ``Ministerio'' es usado como abreviatura del t\'itulo ``Ministerio de Educaci\'on P\'ublica de Costa Rica'', y el t\'ermino ``Viceministro'' es usado como abreviatura del t\'itulo ``Viceministro de Planificaci\'on Institucional y Coordinaci\'on Regional del Ministerio de Educaci\'on P\'ublica de Costa Rica''.
+
+En general, la planificaci\'on de un presupuesto por resultados requiere del establecimiento y la evaluaci\'on peri\'odica de indicadores de resultados, el proceso de planificaci\'on del presupuesto por resultados es un proceso iterativo que requiere revisi\'on y ajuste continuo a lo largo del tiempo, por lo tanto es fundamental disponer de datos precisos y actualizados. El tablero de indicadores permitir\'a facilitar el desarrollo de esta actividad \cite{userm}.
+
+La p\'agina de bienvenida del sistema de informaci\'on dispone de un componente de visualizaci\'on de indicadores, un componente de visualizaci\'on de datos geogr\'aficos, un cat\'alogo de productos, un formulario de solicitud de informaci\'on y un enlace al formulario de autenticaci\'on. Al presionar el enlace, el formulario de autenticaci\'on es desplegado, y al digitar los datos de acceso y presionar el bot\'on para ingresar, si los datos son aut\'enticos, el men\'u administrativo es desplegado\footnote{El usuario debe autenticarse para poder acceder al men\'u administrativo, las opciones del men\'u var\'ian en funci\'on del perfil del usuario.}, el men\'u que permite el acceso a los formularios de mantenimiento \cite{userm}.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Acciones de consulta y b\'usqueda de insumos} \label{sec:binnacle}
+
+La siguiente es la lista de actividades mediante las que el sistema de informaci\'on fue desarrollado. Cada actividad est\'a indexada mediante su fecha de realizaci\'on.
+
+\begin{itemize}
+	\item \textbf{14 de abril.} Env\'io del producto 1 al Viceministro, el Viceministro se compromete a revisarlo y enviar sus observaciones.
+
+    \item \textbf{8 de mayo.} Solicitud de reuni\'on con el Viceministro sobre la estructura de la p\'agina de bienvenida.
+
+    \item \textbf{10 de mayo.} Se logra agendar una presentaci\'on del producto 2, para el 23 de mayo. Env\'io del producto 2 y de los \emph{slices} a Gidget Monge.
+
+    \item \textbf{23 de mayo, 1:00 p.m.} Desde el despacho del Viceministro, la presentaci\'on del producto 2 es postergada y luego cancelada.
+
+    \item \textbf{25 de mayo.} Se logra reagendar la presentaci\'on del producto 2, para el 26 de mayo a las 9:30 a.m.
+
+    \item \textbf{26 de mayo, 9:30 a.m.} La presentaci\'on del producto 2 de nuevo es postergada y luego cancelada. En la tarde el Viceministro se compromete a revisar el producto 2 y de los \emph{slices}.
+
+    \item \textbf{31 de mayo, 7:30 a.m.} Reuni\'on presencial con el personal del Departamento de An\'alisis Estad\'istico. El Viceministro desaprueba el producto 2 (desaprueba la matriz de Ruta de la Educaci\'on, la matriz prove\'ida por Leonardo Salas), Gidget Monge es qui\'en lo comunica.
+
+    \item \textbf{1 de junio.} Solicitud de reuni\'on para tomar nota de las correcciones por parte del Viceministro.
+
+    \item \textbf{1 de junio.} Asistencia al evento de cierre del proyecto\footnote{Cierre del proyecto SDG Fund}.
+
+    \item \textbf{5 de junio.} Solicitud al Viceministro de una nueva matriz.
+
+    \item \textbf{22 de junio.} El viceministro env\'ia una lista de indicadores.
+
+    \item \textbf{4 de julio.} Env\'io del producto 2 ajustado (con la lista de indicadores del Viceministro) y de un informe t\'ecnico sobre los entregables solicitado por Gidget el mismo d\'ia.
+\end{itemize}
+
+Durante el desarrollo de los productos 1 y 2 adem\'as hubo reuniones con personal de diferentes direcciones y dependencias del Ministerio, una con personal de comedores y transporte, otra con personal del departamento de juntas, otra con personal de la Direcci\'on de Infraestructura Educativa, otra con personal de la Direcci\'on de Planificaci\'on Institucional, otras dos con Elena Montero, y otra con personal del Departamento de An\'alisis Estad\'istico.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Perfiles y descripciones de los actores involucrados en el mantenimiento} \label{sec:prof}
+
+La siguiente es la lista preliminar de perfiles de usuario del sistema de informaci\'on. La lista fue prove\'ida por el Viceministro \cite{prop}.
+
+\begin{enumerate}
+	\item \textbf{Direcci\'on de Planificaci\'on}. Los funcionarios del Ministerio encargados de la planificaci\'on, monitoreo y evaluaci\'on del sistema educativo. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a datos actualizados, analizar indicadores y tomar decisiones informadas en pol\'iticas educativas y programas.
+
+	\item \textbf{Direcciones Generales o Departamentos del Ministerio}. Los directores y funcionarios de las diferentes direcciones generales o departamentos del Ministerio, como la direcci\'on de RR HH, el departamento de curr\'iculo, el departamento de evaluaci\'on, el departamento de comedores y transporte, entre otros. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a datos espec\'ificos relacionados con sus \'areas de responsabilidad para apoyar la toma de decisiones.
+
+	\item \textbf{Instituciones Educativas (desde preescolar hasta secundaria)}. Los directores, docentes y personal administrativo de las instituciones educativas. Estos actores, mediante el sistema de informaci\'on, podr\'an registrar y acceder a datos de los estudiantes, el personal docente, los planes de estudio, la asistencia, las calificaciones y otra informaci\'on relevante para la gesti\'on educativa.
+
+	\item \textbf{Estudiantes}. Los estudiantes y sus padres o tutores. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a ciertos m\'odulos para consultar su progreso acad\'emico, registrar su asistencia, acceder a recursos educativos en l\'inea y participar en actividades relacionadas con el aprendizaje.
+
+	\item \textbf{Personal de apoyo educativo}. Los profesionales encargados de brindar apoyo educativo, como psic\'ologos, orientadores, terapeutas, entre otros. Estos actores, mediante el sistema de informaci\'on, podr\'an registrar y acceder a datos de los estudiantes que requieran atenci\'on especial, y podr\'an planificar y monitorear intervenciones y programas de apoyo.
+
+	\item \textbf{Funcionarios de control y evaluaci\'on}. Los auditores, inspectores u otros funcionarios encargados de evaluar la calidad y eficiencia del sistema educativo. Estos actores, mediante el sistema de informaci\'on, podr\'an obtener datos relevantes, realizar seguimiento y evaluaci\'on de indicadores, y generar informes de control y rendici\'on de cuentas.
+
+	\item \textbf{Proveedores de servicios educativos}. Los proveedores externos de servicios educativos, como editores de libros de texto, proveedores de plataformas de aprendizaje en l\'inea, entre otros. Estos actores, mediante el sistema de informaci\'on, podr\'an interactuar con el sistema de informaci\'on para suministrar recursos y servicios educativos.
+
+	\item \textbf{Equipo t\'ecnico}. Los profesionales encargados del mantenimiento, actualizaci\'on y desarrollo tecnol\'ogico, profesionales como desarrolladores, administradores de bases de datos, personal de soporte t\'ecnico, entre otros.
+
+	\item \textbf{Consultores}. Consultores externos contratados para brindar asesor\'ia y soporte en la implementaci\'on y optimizaci\'on del sistema de informaci\'on, o contratados para proporcionar recomendaciones y asistencia t\'ecnica.
+
+	\item \textbf{Padres de familia o tutores}. Los padres de familia o tutores de los estudiantes. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a informaci\'on sobre el progreso acad\'emico de sus hijos, informaci\'on sobre calificaciones, asistencia, y otros datos relevantes. El sistema tambi\'en les facilitar\'a la comunicaci\'on con las instituciones educativas.
+
+	\item \textbf{Personal de gesti\'on financiera}. Los funcionarios encargados de la gesti\'on financiera del Ministerio, como los responsables de presupuesto y finanzas. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a datos financieros, realizar\'a seguimiento de los gastos y financiamiento de programas educativos, y generar informes financieros.
+
+	\item \textbf{Organismos externos}. Organismos gubernamentales, organizaciones no gubernamentales, agencias de cooperaci\'on internacional u otros actores externos que trabajen en colaboraci\'on con el Ministerio. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a datos relevantes y colaborar en la toma de decisiones y evaluaci\'on de programas educativos.
+
+	\item \textbf{Personal de capacitaci\'on y desarrollo profesional}. Los responsables de la capacitaci\'on y desarrollo profesional del personal docente y administrativo. Estos actores, mediante el sistema de informaci\'on, podr\'an planificar, gestionar y evaluar programas de formaci\'on y desarrollo profesional del personal educativo.
+
+	\item \textbf{Medios de comunicaci\'on}. Los representantes de medios de comunicaci\'on, como periodistas y reporteros. Estos actores, mediante el sistema de informaci\'on, podr\'an obtener datos y generar reportajes o noticias relacionadas con el sistema educativo y las pol\'iticas educativas.
+
+	\item \textbf{Usuarios externos interesados}. Cualquier interesado en la informaci\'on del sistema educativo, investigadores, acad\'emicos, y ciudadanos en general. Estos actores, mediante el sistema de informaci\'on, podr\'an acceder a ciertos datos para realizar investigaciones, an\'alisis o seguimiento de indicadores educativos.
+\end{enumerate}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{An\'alisis de los resultados alcanzados}
+
+El objetivo general del proyecto es \emph{brindar soporte t\'ecnico en el an\'alisis de datos que sirvan como base para el planeamiento de un presupuesto por resultados para el Ministerio de Educaci\'on P\'ublica MEP para el a\~no 2024} \cite{trd}. Esta secci\'on contiene las conclusiones y recomendaciones para el primer objetivo espec\'ifico del proyecto, el segundo objetivo espec\'ifico est\'a fuera del alcance del producto 3.
+
+Objetivo espec\'ifico 1: \emph{Implementar una herramienta o sistema de informaci\'on para la producci\'on y an\'alisis de datos referentes al presupuesto del MEP por nivel educativo (preescolar, primaria y secundaria)} \cite{trd}.
+
+\begin{itemize}
+	\item \textbf{Conclusiones.} Seg\'un el documento ``T\'erminos de referencia para contrataci\'on de consultor(a)/contratista individual'', el documento que contiene la fecha de entrega de cada producto \cite{trd}, el tiempo disponible para realizar las tareas de desarrollo, control de calidad y elaboraci\'on de manuales y presentaciones, es de solo dos semanas. Seg\'un la propuesta de trabajo \cite{prop}, el desarrollo de los casos de uso puede requerir de mucho m\'as tiempo, y a pesar de haber desarrollado solo los casos de uso indispensables para el desarrollo del producto 4, seg\'un el cronograma en la propuesta de trabajo \cite{prop}, el producto 3 deb\'ia ser entregado el 11 de mayo, pero fue aprobado hasta el 25 de agosto. Adem\'as del alto volumen de trabajo para el tiempo disponible, las causas del retraso fueron, como se document\'o en la secci\'on \ref{sec:binnacle}, (1) las dificultades para conseguir tiempo con quien, seg\'un el documento ``T\'erminos de referencia [...]'', debe aprobar los productos, el Viceministro \cite{trd}, y (2) la desaprobaci\'on de la matriz de Ruta de la Educaci\'on por parte del Viceministro. Finalmente, el alcance del objetivo espec\'ifico es de un 90\%, en lugar del 10\% pendiente\footnote{El 10\% pendiente corresponde a los ajustes del sistema de informaci\'on solicitados por el personal del Ministerio. La implementaci\'on de los ajustes se entregar\'a como parte del producto 4.}, se desarroll\'o un prototipo del producto 4, esto fue acordado con el Viceministro.
+	\item \textbf{Recomendaciones.} En futuros proyectos, o fases de este proyecto, ser\'ia mejor realizar un an\'alisis de requerimientos antes de establecer las fechas de entrega, por otro lado, el personal del Ministerio encargado de dirigir el desarrollo y aprobar los productos debe estar suficientemente disponible para asumir estos encargos. Una fase de an\'alisis de requerimientos anterior al inicio de este proyecto hubiera podido evitar partir de una matriz de indicadores que no iba a ser aprobada.
+\end{itemize}
+
+Objetivo espec\'ifico 2: \emph{Producir insumos de an\'alisis de datos que respalden el planeamiento de un presupuesto por resultados para el Ministerio de Educaci\'on P\'ublica MEP para el a\~no 2024} \cite{trd}.
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Lista de las acciones por realizar}
+
+La siguiente es la lista de acciones por realizar necesarias para continuar con el proceso de desarrollo. Las tareas que siguen a las acciones en la lista corresponden a la (1) implementaci\'on de los ajustes del sistema de informaci\'on solicitados por el personal del Ministerio, y luego al (2) desarrollo del producto 4, tal como est\'a descrito en la propuesta de trabajo \cite{prop}.
+
+\begin{itemize}
+	\item Solicitud de acceso a las bases de datos en el Ministerio\footnote{Las bases de datos que pueden contener datos necesarios para el c\'alculo de los indicadores son las de (1) la Unidad para la Permanencia, Reincorporaci\'on y \'Exito Educativo, UPRE, (2) el censo de infraestructura, (3) conectividad, (4) informaci\'on distrital, (5) evaluaci\'on de los aprendizajes, y (6) Recursos Humanos \cite{design}.}
+	\item Solicitud de acceso al software de an\'alisis de datos (e.g. Power BI) de el que se disponga en el Ministerio
+	\item Solicitud de acceso al \emph{hosting} del sitio \emph{web} del Ministerio
+	\item Solicitud de la lista de productos para el cat\'alogo\footnote{Lista de productos para el cat\'alogo de Elena Montero}
+	\item Solicitud del c\'odigo fuente de la plataforma Saber
+\end{itemize}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\end{document}

@@ -1,0 +1,381 @@
+\documentclass[xcolor=table, aspectratio=169]{beamer}
+
+
+% Setup appearance:
+
+\usetheme{Antibes}
+\usecolortheme{crane}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+% Syles:
+
+\setbeamercolor{normal text}{fg=white,bg=black!90}
+\setbeamercolor{structure}{fg=white}
+
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+
+\setbeamercolor{palette primary}{fg=black}
+\setbeamercolor{palette secondary}{fg=black}
+\setbeamercolor{palette tertiary}{fg=black}
+\setbeamercolor{palette quaternary}{fg=black}
+
+\setbeamercolor{block title}{fg=black}
+\setbeamercolor{block body}{fg=white,bg=black!85}
+
+\setbeamertemplate{caption}[numbered]{}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+% Standard packages
+
+\usepackage[english,spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{zed-csp}
+
+%usepackage[table,xcdraw]{xcolor}
+
+\graphicspath{{img/}}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title[Propuesta de dise\~no]{Propuesta de dise\~no de un sistema de informaci\'on para la producci\'on y an\'alisis de datos referentes al presupuesto del MEP}
+
+\author[WilC]
+{
+	Wilberth Castro \\
+	\small{wilz04@gmail.com}
+}
+
+
+%institute[TEC]
+%{
+	%Tecnol\'ogico de Costa Rica, Programa de Maestr\'ia en Ciencias de Computaci\'on
+%}
+
+\date[22 May 2023]
+{
+	2023
+}
+
+
+% The main document
+
+\begin{document}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}
+	\maketitle
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+\section{Introducci\'on}
+
+\subsection{Contenido}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Contenido}
+	\begin{itemize}
+		\item Naturaleza de los datos que procesar\'a el sistema de informaci\'on y el prop\'osito en la toma de decisiones que tendr\'a su procesamiento.
+		\item Discusi\'on sobre el proceso de carga de datos en el sistema de informaci\'on, de los encargados del procesamiento y reporte de los datos, y de la frecuencia de cada proceso.
+		\item Descripci\'on de las herramientas mediante las que se realizar\'a el procesamiento y an\'alisis de datos, y el despliegue de los reportes.
+		\item Serie preliminar de indicadores que podr\'an ser calculados a partir de los datos procesados por el sistema de informaci\'on.
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Presupuesto por resultados}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`En qu\'e consiste?}
+    En una serie de actividades, similar a la siguiente.
+    
+	\begin{enumerate}
+		\item Identificaci\'on de los objetivos estrat\'egicos
+		\item Identificaci\'on de las metas
+		\item Asignaci\'on de recursos a las metas
+		\item Establecimiento de indicadores de resultados
+	\end{enumerate}
+		
+	\begin{block}{!`Importante!}
+		El proceso de asignaci\'on de recursos basado en resultados es un proceso iterativo que requiere revisi\'on y ajuste continuo. Es fundamental contar con datos precisos y actualizados para tomar decisiones informadas y garantizar una asignaci\'on de recursos efectiva.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Serie preliminar de indicadores}
+
+\subsection{Matriz de actividades e indicadores}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`Cu\'ales son los indicadores?}
+    La serie preliminar de indicadores fue extraida de la matriz de actividades e indicadores desarrollada por Leonardo Salas, consultor de UNICEF Costa Rica. La matriz, en cada fila contiene...
+    
+	\begin{itemize}
+		\item Un objetivo estrat\'egico
+		\item Un hito/resultado (meta)
+		\item Una o varias actividades
+		\item Un indicador
+		\item Otros datos para el an\'alisis del indicador
+	\end{itemize}
+		
+	\begin{block}{!`Importante!}
+		Se espera que la o las actividades permitan alcanzar el objetivo estrat\'egico correspondiente.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Naturaleza de los datos que ser\'an procesados}
+
+\subsection{Obst\'aculos en el MEP}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Ah, pero en Costa Rica...}
+	\begin{itemize}
+		\item Los centros educativos reciben fondos no solo por parte del ministerio, los fondos de cada centro provienen tambi\'en de otras fuentes de ingreso, algunas establecidas por ley.
+		\item El consumo de los fondos de cada centro educativo est\'a a cargo de una junta semiaut\'onoma.
+		\item Existen leyes que dificultan la reducci\'on del presupuesto, de los fondos que se transfiere cada a\~no a los centros educativos.
+	\end{itemize}
+		
+	\begin{block}{Hay que implementar algo diferente.}
+		Entonces, la implementaci\'on de un juego de programas diferente del actual mediante el que sea posible mejorar significativamente la situaci\'on actual es m\'inimamente plausible.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Soluci\'on}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Entonces, la estrategia es...}
+    La estrategia consiste en desarrollar un sistema de informaci\'on...
+    
+    \begin{itemize}
+		\item Que promueva la transmisi\'on de los objetivos estrat\'egicos a lo largo de todo el organigrama del ministerio\footnote{Actualmente hay una interrupci\'on del flujo, las juntas no tienen acceso al sistema en el que se registran los objetivos del ministerio.}.
+		\item Que disponga de los datos necesarios para el c\'alculo de los indicadores.
+		\item Que facilite el monitoreo del consumo de los fondos (de los centros educativos) en tiempo real.
+		\item Que permita registrar nuevas actividades en los programas existentes.
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Entonces, la estrategia es...}
+    El sistema de informaci\'on debe tener acceso a las bases de datos existentes en el ministerio, como...
+    
+    \begin{itemize}
+		\item La de la Unidad para la Permanencia, Reincorporaci\'on y \'Exito Educativo
+		\item La del censo de infraestructura
+		\item La de conectividad
+		\item La de informaci\'on distrital
+		\item La de evaluaci\'on de los aprendizajes
+		\item La de Recursos Humanos
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Entonces, la estrategia es...}
+    \begin{block}{!`Una capa adicional!}
+		La integraci\'on con las bases de datos actualmente mantenidas mediante alg\'un motor ser\'a implementada mediante una capa adicional que por demanda construya los conjuntos de datos que puedan ser utilizados en lugar de las tablas previstas.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Carga de datos en el sistema de informaci\'on}
+
+\subsection{Encargado para cada caso de uso}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Encargado para cada caso de uso, I}
+	\begin{table}[H]
+		\centering
+		\caption{Encargado para cada caso de uso}
+		\label{facts}
+		\begin{tabular}{lll}
+			\rowcolor[HTML]{333333}
+			{\color[HTML]{FFFFFF} N} & {\color[HTML]{FFFFFF} Caso de uso} & {\color[HTML]{FFFFFF} Encargado} \\
+    		%hline
+    		1 & Acceder a indicadores & DPI \\
+    		2 & Acceder a datos actuales en funci\'on de su perfil & DPI \\
+    		3 & Realizar evaluaci\'on de indicadores & DCI \\
+    		4 & Generar informes de control y rendici\'on de cuentas & DCI \\
+    		5 & Mantener el registro de estudiantes & Centros Educativos \\
+    		6 & Mantener el registro del personal docente & Centros Educativos \\
+    		7 & Mantener el registro de la asistencia & Centros Educativos \\
+    		8 & Mantener el registro de las calificaciones & Centros Educativos
+		\end{tabular}
+	\end{table}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Encargado para cada caso de uso, II}
+	\begin{table}[H]
+		\centering
+		\caption{Encargado para cada caso de uso}
+		\label{facts}
+		\begin{tabular}{lll}
+			\rowcolor[HTML]{333333}
+			{\color[HTML]{FFFFFF} N} & {\color[HTML]{FFFFFF} Caso de uso} & {\color[HTML]{FFFFFF} Encargado} \\
+    		%hline
+    		9 & Mantener los planes de estudio & DDC \\
+    		10 & Monitorear programas de apoyo & DPE \\
+    		11 & Mantener programas de apoyo & DPE \\
+    		12 & Mantener datos de los estudiantes especiales & DPE \\
+    		13 & Generar informes financieros & DF \\
+    		14 & Consultar progreso acad\'emico & Estudiantes \\
+    		15 & Registrar asistencia & Estudiantes \\
+    		16 & Participar en actividades did\'acticas & DRT
+		\end{tabular}
+	\end{table}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Encargado para cada caso de uso, III}
+	\begin{table}[H]
+		\centering
+		\caption{Encargado para cada caso de uso}
+		\label{facts}
+		\begin{tabular}{lll}
+			\rowcolor[HTML]{333333}
+			{\color[HTML]{FFFFFF} N} & {\color[HTML]{FFFFFF} Caso de uso} & {\color[HTML]{FFFFFF} Encargado} \\
+    		%hline
+    		17 & Acceder a recursos educativos en l\'inea & DRTE \\
+    		18 & Mantener el suministro de recursos educativos & DRTE \\
+    		19 & Acceder a calificaciones & Padres de familia o tutores \\
+    		20 & Enviar mensaje (al centro educativo) & Padres de familia o tutores \\
+    		21 & Ver mensajes & Padres de familia o tutores \\
+    		22 & Planificar programas de formaci\'on de docentes & IDPUGS \\
+    		23 & Gestionar programas de formaci\'on de docentes & IDPUGS \\
+    		24 & Evaluar programas de formaci\'on de docentes & IDPUGS
+		\end{tabular}
+	\end{table}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Acceso a la herramienta}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Desde el sitio Web del ministerio...}
+    Para ingresar...
+    
+	\begin{enumerate}
+		\item El usuario solo necesita hacer click en el enlace designado.
+		\item El navegador desplegar\'a la p\'agina de bienvenida.
+	\end{enumerate}
+		
+	\begin{block}{!`Bienvenid@!}
+		En la p\'agina de bienvenida hay un componente de visualizaci\'on de indicadores, un componente de visualizaci\'on de datos geogr\'aficos, un cat\'alogo de productos, un formulario de solicitud de informaci\'on\footnote{La solicitud ser\'a registrada en la base de datos, y enviada por correo a la direcci\'on o dependencia que el usuario elija, sin embargo, el usuario podr\'a no elegir, en este caso la solicitud ser\'a enviada a La Contralor\'ia de Servicios.} y un enlace al men\'u de administraci\'on.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`Y si soy administrador?}
+    Entonces...
+    
+	\begin{enumerate}
+		\item El usuario debe hacer click en el enlace al men\'u administrativo.
+		\item El navegador desplegar\'a un formulario de autenticaci\'on.
+		\item El usuario deber\'a ingresar sus datos de acceso y presionar el bot\'on ``Entrar''.
+		\item El navegador desplegar\'a un nuevo men\'u, el men\'u administrativo\footnote{En caso de que los datos de acceso no sean aut\'enticos, el navegador no permitir\'a el acceso, informar\'a lo sucedido y permitir\'a volver a intentar. Adem\'as habr\'a un mecanismo para el registro de nuevos usuarios, y otro para la recuperaci\'on de contrase\~nas olvidadas.}.
+	\end{enumerate}
+		
+	\begin{block}{!`Bienvenid@ Admin!}
+		Mediante el men\'u administrativo podr\'a acceder a los formularios de mantenimiento, el acceso a cada formulario depender\'a de su perfil de administraci\'on.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{!`Bienvenid@ Admin!}
+	\begin{block}{?`Qu\'e desea hacer?}
+		Cada una de las opciones en el men\'u le permitir\'a acceder a un formulario de mantenimiento para administrar un conjunto particular de datos. Cada formulario es similar a una hoja de c\'alculo, mediante una barra de herramientas, le permitir\'a la carga masiva de nuevos datos, y la lectura, actualizaci\'on y eliminaci\'on de los datos almacenados. Algunos conjuntos de datos a los que podr\'a acceder son los de, (1) N\'omina de centros educativos, (2) Reporte de la liquidaci\'on general, (3) Indicadores, (4) Plan anual de trabajo (de centros educativos), (5) Seguridad, (6) L\'ogica de negocio, (7) Cat\'alogo de productos, entre otros.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Herramientas de procesamiento y an\'alisis de datos, y de reporter\'ia}
+
+\subsection{Herramientas existentes}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`Qu\'e utilizaremos?}
+	\begin{itemize}
+		\item El mapa interactivo en la p\'agina de bienvenida ser\'a desplegado mediante el sistema de informaci\'on geogr\'afica que utiliza el ministerio, ArcGIS\footnote{El mapa requerir\'a datos que deber\'an ser cargados mediante el Sistema de Informaci\'on Geogr\'afica del Ministerio de Educaci\'on P\'ublica, SIGMEP.}.
+		\item El motor propuesto para soportar la base de datos es MySQL.
+		\item En el navegador, para el despliegue de indicadores se utilizar\'a la librer\'ia D3.js
+		\item En el navegador, para el despliegue de formularios y reportes se utilizar\'a el complemento DataTables\footnote{DataTables es un complemento especializado en el manejo de tablas de datos, que adem\'as facilita la descarga de reportes en formatos Excel y PDF.}.
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Herramientas nuevas}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{?`Qu\'e desarrollaremos?}
+	\begin{block}{!`Implementaremos una heur\'istica!}
+		Un mecanismo que permita comparar para (1) la serie de indicadores, y (2) el presupuesto asignado a cada objetivo estrat\'egico, en los dos casos el valor en la \'ultima planificaci\'on con el valor en la planificaci\'on actual\footnote{Claramente, estas comparaciones ser\'an posibles solo desde la segunda planificaci\'on en adelante.}, y que a partir de las dos comparaciones detecte y reporte las debilidades de la planificaci\'on actual, sin que exija resolverlas.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Insumos necesarios}
+ 
+\subsection{Para continuar...}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Necesitamos...}
+	\begin{itemize}
+		\item La serie de indicadores final.
+		\item Un mecanismo que promueva la transmisi\'on de los objetivos a lo largo del organigrama del ministerio.
+		\item Un mecanismo que garantice que cada resultado en el PAT de cada centro educativo derive de alguno de los hitos/resultados del ministerio\footnote{El mecanismo podr\'ia ser implementado mediante el sistema de juntas, s\'i se dispone del c\'odigo fuente.}.
+		\item Acceso a las bases de datos existentes en el ministerio.
+		\item Disponibilidad del software de an\'alisis de datos que se utilice en el ministerio.
+		\item Acceso al servidor en el que est\'a el sitio Web del ministerio.
+		\item Lista de productos para el cat\'alogo, de Elena Montero.
+		\item Correcciones y sugerencias del documento de dise\~no, por parte del Viceministro de Planificaci\'on.
+	\end{itemize}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\section{Conclusiones y recomendaciones}
+
+\subsection{Finalmente...}
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{!`Desde el principio hemos estado cortos de tiempo, y ahora m\'as!}
+	\begin{itemize}
+		\item Es importante priorizar las tareas de desarrollo necesarias para la implementaci\'on de los indicadores relativos al tr\'afico de drogas, denuncias, y otras problem\'aticas sociales\footnote{Otras problem\'aticas sociales como las de alertas tempranas, adolescentes madres, y primeros auxilios psicol\'ogicos a estudiantes y familias.}, y dejar el resto para ser desarrollado en una segunda fase del proyecto.
+		\item Es conveniente que el sistema de informaci\'on sea implementado como una soluci\'on de integraci\'on de bases de datos.
+	\end{itemize}
+	
+	\begin{block}{Una recomendaci\'on...}
+		Ser\'a necesario transmitir al personal educativo los objetivos estrat\'egicos, esto podr\'a ser logrado mediante los programas de formaci\'on y desarrollo profesional existentes en el ministerio.
+	\end{block}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[plain, c]
+	\begin{center}
+		\Huge !`Gracias!
+	\end{center}
+\end{frame}
+% --------------------------------------------------------------------------------------------------------------------------------
+
+\end{document}
